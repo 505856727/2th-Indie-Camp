@@ -33,12 +33,11 @@ public class GhostControl : MonoBehaviour {
             if (freeze || die)
             {
                 rigidbody.velocity = new Vector3(0, 0, 0);
-                return;
-            }
                 
-            PlayerControl(playerid);
-            AnimatorControl();
-        }  
+            }
+            else PlayerControl(playerid);
+        }
+        AnimatorControl();
     }
 
     void PlayerControl(string id)
@@ -66,17 +65,17 @@ public class GhostControl : MonoBehaviour {
 
     public void AnimatorControl()
     {
-        if ((Mathf.Abs(Input.GetAxis("LeftX" + playerid)) > 0.05f || Mathf.Abs(Input.GetAxis("LeftY" + playerid)) > 0.05f )&& !isattack)
+         if (freeze)
+        {
+            m_anim.SetInteger("state", 4);
+        }
+        else if ((Mathf.Abs(Input.GetAxis("LeftX" + playerid)) > 0.05f || Mathf.Abs(Input.GetAxis("LeftY" + playerid)) > 0.05f )&& !isattack)
         {
             m_anim.SetInteger("state", 1);
         }
         else if (isattack)
         {
             m_anim.SetInteger("state", 2);
-        }
-        else if (freeze)
-        {
-            m_anim.SetInteger("state", 4);
         }
         else
         {
