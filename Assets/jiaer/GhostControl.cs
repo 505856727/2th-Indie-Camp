@@ -65,12 +65,7 @@ public class GhostControl : MonoBehaviour {
 
     public void AnimatorControl()
     {
-        print(die);
-        if (die)
-        {
-            m_anim.SetInteger("state", 3);
-        }
-        else  if (freeze)
+        if (freeze)
         {
             m_anim.SetInteger("state", 4);
         }

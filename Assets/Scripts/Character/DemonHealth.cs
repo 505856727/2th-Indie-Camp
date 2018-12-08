@@ -38,15 +38,15 @@ public class DemonHealth : CharacterHealth
         }
         else
         {
-            //Animator setTrigger
-            //
-            controller.die = true;
-            //Die动画播放完之后调用Destroy
-            //
-            //TombStone TombStoneObj = Instantiate(TombStonePrefab, transform.position, Quaternion.identity);
-            //TombStoneObj.playerid = controller.playerid;
-            StartCoroutine(Reborn());
+            DieProcess();
         }
+    }
+
+    public void DieProcess()
+    {
+        controller.die = true;
+        GetComponentInChildren<Animator>().SetTrigger("Die");
+        StartCoroutine(Reborn());
     }
 
     IEnumerator Reborn()
@@ -54,6 +54,6 @@ public class DemonHealth : CharacterHealth
         yield return new WaitForSeconds(rebornTime);
         //Animator setTrigger
         controller.die = false;
-        //恢复
+        GetComponentInChildren<Animator>().SetTrigger("Reborn");
     }
 }

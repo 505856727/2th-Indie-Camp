@@ -215,7 +215,7 @@ MonoBehaviour:
   currentHp: 100
   spriteRender: {fileID: 212596951562181796}
   splashColor: {r: 1, g: 0, b: 0, a: 1}
-  toredspeed: 1
+  toredspeed: 2
 --- !u!114 &114291501047976232
 MonoBehaviour:
   m_ObjectHideFlags: 1
