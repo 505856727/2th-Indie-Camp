@@ -15,6 +15,7 @@ public class AngelHealth : CharacterHealth {
     public  SpriteRenderer spriteRender;
     private Color originColor;
     public Color splashColor = Color.red;
+    public float toredspeed;
     // Use this for initialization
     void Start () {
         spriteRender = GetComponentInChildren<SpriteRenderer>();
@@ -51,8 +52,8 @@ public class AngelHealth : CharacterHealth {
     {
         base.TakeDamage(damage, attackerID);
         currentHp -= damage;
-
-        
+        StopCoroutine("ToRed");
+        StartCoroutine("ToRed");        
         if (currentHp <= 0)
         {
             Debug.Log("Die");
@@ -67,5 +68,19 @@ public class AngelHealth : CharacterHealth {
 
         //splashTimer = Time.time;
         //splashTime = Time.time;
+    }
+
+    IEnumerator ToRed()
+    {
+        while (spriteRender.color.r > 0)
+        {
+            spriteRender.color -= new Color(0, toredspeed * Time.deltaTime, toredspeed * Time.deltaTime, 0);
+            yield return null;
+        }
+        while (spriteRender.color.r < 255)
+        {
+            spriteRender.color += new Color(0, toredspeed * Time.deltaTime, toredspeed * Time.deltaTime, 0);
+            yield return null;
+        }
     }
 }
