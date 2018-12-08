@@ -7,11 +7,13 @@ public class weapon : MonoBehaviour {
     Vector3 screenPosition;//将物体从世界坐标转换为屏幕坐标
     Vector3 mousePositionOnScreen;//获取到点击屏幕的屏幕坐标
     Vector3 mousePositionInWorld;//将点击屏幕的屏幕坐标转换为世界坐标
+    Vector3 direction;//武器的方向向量
+    public Bullet bulletPrefab;
+    //private Transform bullets;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,7 +26,24 @@ public class weapon : MonoBehaviour {
         //将相机中的坐标转化为世界坐标
         mousePositionInWorld = Camera.main.ScreenToWorldPoint(mousePositionOnScreen);
         //物体到角色的向量
-		mousePositionInWorld - transform.position
-        
+		//mousePositionInWorld - transform.position
+        //Vector3.Angle(Vector3.Right,dirB);
+		Vector3 offVector = mousePositionInWorld - transform.position;
+		if(offVector.y<0)
+			transform.eulerAngles = new Vector3(0, 0, (-1)*Vector3.Angle(mousePositionInWorld - transform.position,Vector3.right));
+		else 
+		    transform.eulerAngles = new Vector3(0, 0, Vector3.Angle(mousePositionInWorld - transform.position,Vector3.right));
+
+        direction = (mousePositionInWorld - transform.position).normalized;
+        if (Input.GetMouseButtonDown(0))
+        {
+            Shoot();
+        }
 	}
+
+    void Shoot()
+    {
+        Bullet bullet = Instantiate(bulletPrefab, transform.position, Quaternion.EulerAngles(transform.eulerAngles));
+        bullet.forwardVec = direction;
+    }
 }
