@@ -27,7 +27,7 @@ public class GameStart : MonoBehaviour {
             star.transform.position = Vector3.zero;
             if (Input.GetMouseButtonDown(0))
             {
-                SceneManager.LoadScene("Game");
+                SceneManager.LoadScene("Selector");
             }
         }
         else if (hit.collider && hit.collider.gameObject == quit)

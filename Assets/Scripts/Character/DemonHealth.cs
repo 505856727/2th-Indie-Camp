@@ -40,7 +40,9 @@ public class DemonHealth : CharacterHealth
             AudioManager.GetInstance().PlaySound(6);
             controller.freeze = freeze;
             freezeTimer = Time.time;
+            anim.ResetTrigger("frozenEnd");
             anim.SetTrigger("frozenBegin");
+
         }
         else
         {
