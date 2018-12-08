@@ -42,7 +42,7 @@ public class FightForAngle : MonoBehaviour {
             }
             yield return null;
         }
-        players[FindMax()].GetComponent<InputDemo>().playerid = "5";
+        players[FindMax()].GetComponent<InputDemo>().isangle = true;
         print(players[FindMax()]);
     }
 }
