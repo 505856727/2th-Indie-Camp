@@ -8,9 +8,11 @@ public class weapon : MonoBehaviour {
     Vector3 mousePositionOnScreen;//获取到点击屏幕的屏幕坐标
     Vector3 mousePositionInWorld;//将点击屏幕的屏幕坐标转换为世界坐标
     Vector3 direction;//武器的方向向量
+    private float shootTimer = float.MinValue;
     public Bullet bulletPrefab;
     public AngleControl angelController;
-    //private Transform bullets;
+
+    public float shooterInterval = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -38,15 +40,22 @@ public class weapon : MonoBehaviour {
 
         direction = (mousePositionInWorld - transform.position).normalized;
 
-        //if (Input.GetMouseButtonDown(0))
-        if(angelController.isattack)
+        //Debug.Log(shootTimer);
+        //shootTimer += Time.deltaTime;
+        if (Time.time - shootTimer >= shooterInterval)
         {
-            Shoot();
+            if (Input.GetMouseButtonDown(0))
+            //if(angelController.isattack)
+            {
+                Shoot();
+            }
         }
+        
 	}
 
     void Shoot()
     {
+        shootTimer = Time.time;
         Bullet bullet = Instantiate(bulletPrefab, transform.position, Quaternion.EulerAngles(transform.eulerAngles));
         bullet.forwardVec = direction;
     }
