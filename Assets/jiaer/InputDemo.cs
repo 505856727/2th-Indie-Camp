@@ -45,9 +45,12 @@ public class InputDemo : MonoBehaviour {
     IEnumerator Attack()
     {
         yield return new WaitForSeconds(attacktime / 2);
-        if (Vector3.Distance(enemy.transform.position, transform.position) < attackrange)
+        if ((transform.localScale.x > 0 && transform.position.x < enemy.transform.position.x) || (transform.localScale.x < 0 && transform.position.x > enemy.transform.position.x))
         {
-            print(gameObject + " win");
+            if (Vector3.Distance(enemy.transform.position, transform.position) < attackrange)
+            {
+                print(gameObject + " win");
+            }
         }
         yield return new WaitForSeconds(attacktime / 2);
         isattack = false;

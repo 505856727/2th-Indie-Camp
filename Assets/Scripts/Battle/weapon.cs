@@ -41,7 +41,6 @@ public class weapon : MonoBehaviour {
         //if (Input.GetMouseButtonDown(0))
         if(angelController.isattack)
         {
-            Debug.Log("111111");
             Shoot();
         }
 	}

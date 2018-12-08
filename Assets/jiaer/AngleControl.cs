@@ -16,7 +16,6 @@ public class AngleControl : MonoBehaviour {
 	void Update () {
         AngleMove();
         AngleAttack();
-        print(id);
 	}
 
     void AngleMove()
@@ -34,7 +33,6 @@ public class AngleControl : MonoBehaviour {
 
     void AngleAttack()
     {
-
         if (Input.GetAxis("Attack" + id) == 1 && isattack == false)
         {
             isattack = true;
