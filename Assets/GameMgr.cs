@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameMgr : MonoBehaviour {
     public static GameMgr instance;
@@ -9,6 +10,8 @@ public class GameMgr : MonoBehaviour {
     public Dictionary<string, WinJudge> playerList = new Dictionary<string, WinJudge>();
     public List<Slider> sliders = new List<Slider>(3);
     public WinJudge Current_WinJudge;
+    public Text WinText;
+
 	// Use this for initialization
 	void Start () {
         instance = this;
@@ -28,7 +31,11 @@ public class GameMgr : MonoBehaviour {
             //Current_WinJudge.WinSlider.value = Current_WinJudge.accumulateTime / TimeToWin * 100;
             sliders[Current_WinJudge.sliderOrder].value = Current_WinJudge.accumulateTime / TimeToWin * 100;
             if (Current_WinJudge.accumulateTime >= TimeToWin)
-                Debug.Log("Win!");
+            {
+                WinText.gameObject.SetActive(true);
+                WinText.text = "Player" + Current_WinJudge.playerID + "Win!";
+                Invoke("ReturnToMenu", 5.0f);
+            }
         }
     }
 
@@ -38,5 +45,10 @@ public class GameMgr : MonoBehaviour {
         //int temp = killerWinJudge.sliderOrder;
         //playerList[ID].sliderOrder = killerWinJudge.sliderOrder;
         Current_WinJudge = playerList[killerID];
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

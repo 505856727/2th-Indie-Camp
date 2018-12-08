@@ -21,6 +21,14 @@ public class AngleControl : MonoBehaviour {
     void AngleMove()
     {
         transform.position += new Vector3(Input.GetAxis("LeftX" + id) * speed * Time.deltaTime, -Input.GetAxis("LeftY" + id) * speed * Time.deltaTime, 0);
+        if(Input.GetAxis("LeftX" + id) < 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (Input.GetAxis("LeftX" + id) > 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
         if (Mathf.Abs(Input.GetAxis("RightY" + id)) > 0.5f || Mathf.Abs(Input.GetAxis("RightX" + id)) > 0.5f)
         {
             if (Input.GetAxis("RightY" + id) < 0)

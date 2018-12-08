@@ -44,13 +44,13 @@ public class GhostControl : MonoBehaviour {
         
 
         transform.position += new Vector3(moveX * speed * Time.deltaTime, -moveY * speed * Time.deltaTime, 0);
-        if (Input.GetAxis("RightX" + id) < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (Input.GetAxis("RightX" + id) > 0)
+        if (Input.GetAxis("LeftX" + id) < 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (Input.GetAxis("LeftX" + id) > 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         //print(playerid+" "+Input.GetAxis("Attack" + playerid));
         if (Input.GetAxis("Attack" + playerid) < -0.9f && isattack == false)
