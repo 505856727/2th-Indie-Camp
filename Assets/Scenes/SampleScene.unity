@@ -145,6 +145,7 @@ MonoBehaviour:
   playerid: 2
   isangle: 1
   isattack: 0
+  canmove: 0
   attackrange: 1.5
   attacktime: 0.5
   enemy: {fileID: 1610841660}
@@ -1865,11 +1866,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4382883759952528, guid: 956acb0a4b200fc4ba2d2aedcfb9a2b2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.545352
+      value: 4.25
       objectReference: {fileID: 0}
     - target: {fileID: 4382883759952528, guid: 956acb0a4b200fc4ba2d2aedcfb9a2b2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.03
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 4382883759952528, guid: 956acb0a4b200fc4ba2d2aedcfb9a2b2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1898,6 +1899,26 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 956acb0a4b200fc4ba2d2aedcfb9a2b2, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &604742040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1724345069833854, guid: 956acb0a4b200fc4ba2d2aedcfb9a2b2,
+    type: 2}
+  m_PrefabInternal: {fileID: 604742039}
+--- !u!58 &604742041
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 604742040}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
 --- !u!1 &789833431
 GameObject:
   m_ObjectHideFlags: 0
@@ -2062,6 +2083,7 @@ MonoBehaviour:
   playerid: 1
   isangle: 0
   isattack: 0
+  canmove: 0
   attackrange: 1.5
   attacktime: 0.5
   enemy: {fileID: 0}

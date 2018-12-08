@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class weapon : MonoBehaviour {
+    public string attackerID;
     public float shootInterval = 1.0f;
     private float shootTimer = float.MinValue;
     Vector3 screenPosition;//将物体从世界坐标转换为屏幕坐标
@@ -11,11 +12,14 @@ public class weapon : MonoBehaviour {
     Vector3 direction;//武器的方向向量
     public Bullet bulletPrefab;
     private AngleControl angelController;
+    private CharacterMovement moveController;
     //private Transform bullets;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         angelController = GetComponentInParent<AngleControl>();
+        moveController = GetComponentInParent<CharacterMovement>();
+        attackerID = moveController.playerid;
     }
 	
 	// Update is called once per frame
@@ -52,5 +56,6 @@ public class weapon : MonoBehaviour {
         shootTimer = Time.time;
         Bullet bullet = Instantiate(bulletPrefab, transform.position, Quaternion.EulerAngles(transform.eulerAngles));
         bullet.forwardVec = direction;
+        bullet.attackerID = attackerID;
     }
 }

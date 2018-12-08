@@ -12,7 +12,7 @@ public class CharacterHealth : MonoBehaviour {
 		
 	}
 
-    public virtual void TakeDamage(float damage,GameObject attacker)
+    public virtual void TakeDamage(float damage, string attackerID)
     {
 
     }

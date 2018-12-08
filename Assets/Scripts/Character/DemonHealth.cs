@@ -26,9 +26,9 @@ public class DemonHealth : CharacterHealth
         }
 	}
 
-    public override void TakeDamage(float damage, GameObject attacker)
+    public override void TakeDamage(float damage, string attackerID)
     {
-        base.TakeDamage(damage, attacker);
+        base.TakeDamage(damage, attackerID);
         if (!freeze)
         {
             freeze = true;
