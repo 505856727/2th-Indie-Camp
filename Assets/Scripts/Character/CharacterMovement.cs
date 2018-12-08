@@ -6,10 +6,11 @@ public class CharacterMovement : MonoBehaviour {
 
     private SpriteRenderer spriteRenderer;
     public float speed = 5;
+    public bool freeze;//冻住不能走
     // Use this for initialization
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
     // Use this for initialization
     void Start () {
@@ -18,6 +19,8 @@ public class CharacterMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (freeze)
+            return;
         Vector2 move = Vector2.zero;
 
         move.x = Input.GetAxis("Horizontal");
