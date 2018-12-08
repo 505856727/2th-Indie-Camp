@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class GameMgr : MonoBehaviour {
     public float TimeToWin = 60;
     public Dictionary<string, WinJudge> playerList = new Dictionary<string, WinJudge>();
-    public List<Slider> sliders;
+    public Dictionary<string, Slider> Sliders = new Dictionary<string, Slider>();
     public WinJudge Current_WinJudge;
 	// Use this for initialization
 	void Start () {
         for(int i = 1; i <= 4; i++)
         {
-            playerList.Add(i.ToString(), new WinJudge(i.ToString(),sliders[i]));
+            playerList.Add(i.ToString(), new WinJudge(i.ToString()));
         }
     }
 	
@@ -21,14 +21,15 @@ public class GameMgr : MonoBehaviour {
         if (Current_WinJudge!=null)
         {
             Current_WinJudge.accumulateTime += Time.deltaTime;
-            Current_WinJudge.WinSlider.value = Current_WinJudge.accumulateTime / TimeToWin * 100;
+            //Current_WinJudge.WinSlider.value = Current_WinJudge.accumulateTime / TimeToWin * 100;
+
             if (Current_WinJudge.accumulateTime >= TimeToWin)
                 Debug.Log("Win!");
         }
     }
 
-    public void TurnToAngel(string id)
+    public void TurnToAngel(string ID)
     {
-        Current_WinJudge = playerList[id];
+        Current_WinJudge = playerList[ID];
     }
 }
