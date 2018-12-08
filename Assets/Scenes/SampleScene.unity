@@ -3587,6 +3587,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a3b1074d515014a932d0db225fcc9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeToWin: 60
+  sliders:
+  - {fileID: 1548027885}
+  - {fileID: 1140751465}
+  - {fileID: 495326911}
 --- !u!114 &1190171691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4180,6 +4185,7 @@ MonoBehaviour:
   WinSlider: {fileID: 1548027885}
   isAngle: 1
   TimeToWin: 60
+  accumulateTime: 0
 --- !u!1 &1628676010
 GameObject:
   m_ObjectHideFlags: 0

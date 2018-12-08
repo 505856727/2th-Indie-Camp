@@ -3,26 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WinJudge : MonoBehaviour {
+public class WinJudge
+{
+    public string playerID;
     public Slider WinSlider;
-    
-    public bool isAngle = false;
-    public float TimeToWin = 60;
-    private float accumulateTime = 0;//累积时间
-    
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (isAngle)
-        {
-            accumulateTime += Time.deltaTime;
-            WinSlider.value = accumulateTime / TimeToWin *100;
-            if (accumulateTime >= TimeToWin)
-                Debug.Log("Win!");
-        }
-	}
+    public float accumulateTime = 0;//累积时间
+    public WinJudge(string id,Slider _slider)
+    {
+        playerID = id;
+        WinSlider = _slider;
+    }
 }
