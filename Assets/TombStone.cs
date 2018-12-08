@@ -5,7 +5,7 @@ using UnityEngine;
 public class TombStone : MonoBehaviour {
     public string playerid;
     public float rebornTime = 5.0f;
-    GameObject demonPrefab;
+    public GameObject demonPrefab;
     private float rebornTimer = float.MinValue;
     
 	// Use this for initialization
