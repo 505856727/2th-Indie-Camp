@@ -16,13 +16,15 @@ public class GhostControl : MonoBehaviour {
     public bool freeze = false;
     public bool die = false;
     public Animator m_anim;
+    private Rigidbody2D rigidbody;
 	// Use this for initialization
 	void Start () {
         m_anim = GetComponentInChildren<Animator>();
+        rigidbody = GetComponent<Rigidbody2D>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void FixedUpdate()
+    {
         if (canmove)
         {
             if (freeze || die)
@@ -36,7 +38,8 @@ public class GhostControl : MonoBehaviour {
     {
         float moveX = Input.GetAxis("LeftX" + id);
         float moveY = Input.GetAxis("LeftY" + id);        
-        transform.position += new Vector3(moveX * speed * Time.deltaTime, -moveY * speed * Time.deltaTime, 0);
+        rigidbody.velocity = new Vector3(moveX * speed * Time.deltaTime, -moveY * speed * Time.deltaTime, 0);
+        //transform.position += new Vector3(moveX * speed * Time.deltaTime, -moveY * speed * Time.deltaTime, 0);
         if (moveX < 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
