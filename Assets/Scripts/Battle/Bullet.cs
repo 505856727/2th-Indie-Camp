@@ -25,9 +25,11 @@ public class Bullet : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        bloom = true;
-        m_anim.SetTrigger("bloom");
-        collision.GetComponent<DemonHealth>().TakeDamage(damage, attackerID);
-        //由动画驱动
+        if(!collision.GetComponent<GhostControl>().die)
+        {
+            bloom = true;
+            m_anim.SetTrigger("bloom");
+            collision.GetComponent<DemonHealth>().TakeDamage(damage, attackerID);
+        }
     }
 }

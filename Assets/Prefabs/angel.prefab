@@ -29,7 +29,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1146850553507032
 GameObject:
   m_ObjectHideFlags: 1
@@ -215,6 +215,7 @@ MonoBehaviour:
   currentHp: 100
   spriteRender: {fileID: 212596951562181796}
   splashColor: {r: 1, g: 0, b: 0, a: 1}
+  toredspeed: 1
 --- !u!114 &114291501047976232
 MonoBehaviour:
   m_ObjectHideFlags: 1

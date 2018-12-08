@@ -18,7 +18,7 @@ public class AngelHealth : CharacterHealth {
     public float toredspeed;
     // Use this for initialization
     void Start () {
-        spriteRender = GetComponentInChildren<SpriteRenderer>();
+        //spriteRender = GetComponentInChildren<SpriteRenderer>();
         originColor = spriteRender.color;
     }
 
@@ -72,12 +72,12 @@ public class AngelHealth : CharacterHealth {
 
     IEnumerator ToRed()
     {
-        while (spriteRender.color.r > 0)
+        while (spriteRender.color.g > 0.1f)
         {
             spriteRender.color -= new Color(0, toredspeed * Time.deltaTime, toredspeed * Time.deltaTime, 0);
             yield return null;
         }
-        while (spriteRender.color.r < 255)
+        while (spriteRender.color.g < 0.99f)
         {
             spriteRender.color += new Color(0, toredspeed * Time.deltaTime, toredspeed * Time.deltaTime, 0);
             yield return null;
