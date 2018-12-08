@@ -42,4 +42,6 @@ public class CharacterMovement : MonoBehaviour {
         Vector3 temp = new Vector3(move.x, move.y, 0);
         transform.position = transform.position + temp*speed;
     }
+
+
 }
