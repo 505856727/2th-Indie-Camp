@@ -5,15 +5,15 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
     public string attackerID;
     public float damage = 10.0f;
-    public float speed = 100.0f;
-    public float duration = 1.0f;
+    public float speed = 45.0f;
+    public float duration = 2.0f;
     private bool bloom = false;
     private Animator m_anim;
     //public Vector3 forwardVec;
 	// Use this for initialization
 	void Start () {
         m_anim = GetComponent<Animator>();
-        //Destroy(this.gameObject, duration);
+        Destroy(this.gameObject, duration);
     }
 	
 	// Update is called once per frame

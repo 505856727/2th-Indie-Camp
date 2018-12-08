@@ -8,10 +8,18 @@ public class AngelHealth : CharacterHealth {
     public Slider HpSlider;
     public float maxHp = 100;
     public float currentHp = 100;
+
+    private float splashTimer;//计时器
+    private float splashDuration = 1.0f;
+    private float splashTime;//计时器
+    public  SpriteRenderer spriteRender;
+    private Color originColor;
+    public Color splashColor = Color.red;
     // Use this for initialization
     void Start () {
-		
-	}
+        spriteRender = GetComponentInChildren<SpriteRenderer>();
+        originColor = spriteRender.color;
+    }
 
     private void OnEnable()
     {
@@ -22,8 +30,22 @@ public class AngelHealth : CharacterHealth {
 
     // Update is called once per frame
     void Update () {
-		
-	}
+        //if(Time.time - splashTimer<= splashDuration)
+        //{
+        //    splashTime += Time.deltaTime;
+        //    if (splashTime % 2 > 0.1)//除以2余数大于0.5即每1秒显隐一次
+        //    {
+        //        spriteRender.color = splashColor;
+        //    }
+        //    else
+        //    {
+        //        spriteRender.color = originColor;
+        //    }
+
+        //}
+        //else spriteRender.color = originColor;
+
+    }
 
     public override void TakeDamage(float damage, string attackerID)
     {
@@ -42,5 +64,8 @@ public class AngelHealth : CharacterHealth {
         if (HpSlider)
             HpSlider.value = currentHp;
         else Debug.LogError("No Slider");
+
+        //splashTimer = Time.time;
+        //splashTime = Time.time;
     }
 }

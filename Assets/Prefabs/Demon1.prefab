@@ -128,7 +128,7 @@ Animator:
   m_GameObject: {fileID: 1513205699199948}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eedf86a7e19c7ab4da55a3bac78b9e4b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 205cd5f5f89da2b4cb24326f1e607e90, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -159,6 +159,8 @@ MonoBehaviour:
   enemy: {fileID: 0}
   freeze: 0
   die: 0
+  m_anim: {fileID: 0}
+  attackInterval: 1
 --- !u!114 &114647975268756220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,8 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b97253c8f8fc044ba130aeee4ab195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freezeDuration: 3
-  rebornTime: 5
   controller: {fileID: 0}
   TombStonePrefab: {fileID: 0}
 --- !u!212 &212983174159352424
@@ -209,7 +209,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: bb5eedf9901b401438a5ae4d8040e378, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e809c0b40ba8ec74fb615325de4016dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
