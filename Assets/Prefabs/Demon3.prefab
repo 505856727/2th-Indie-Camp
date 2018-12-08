@@ -148,8 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b97253c8f8fc044ba130aeee4ab195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freezeDuration: 3
-  rebornTime: 5
   controller: {fileID: 0}
   TombStonePrefab: {fileID: 0}
 --- !u!114 &114541721995400952
@@ -211,12 +209,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300014, guid: 68b7069a254d4a840b78c61c573d303c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5803c6239e4b12444b7b7a6c6a072420, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.49, y: 1.98}
+  m_Size: {x: 2.22, y: 2.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
