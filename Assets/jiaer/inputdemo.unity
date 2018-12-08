@@ -157,6 +157,11 @@ Prefab:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 768145761}
+    - target: {fileID: 114684571271113678, guid: f35f1fa1d8c621b47961804aaab45446,
+        type: 2}
+      propertyPath: attackdamage
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f35f1fa1d8c621b47961804aaab45446, type: 2}
   m_IsPrefabAsset: 0
@@ -204,14 +209,133 @@ Prefab:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 768145761}
+    - target: {fileID: 4191230419590896, guid: 7b7900c9a08900d4db316643cf87e5bc, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114684571271113678, guid: 7b7900c9a08900d4db316643cf87e5bc,
+        type: 2}
+      propertyPath: attackdamage
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114684571271113678, guid: 7b7900c9a08900d4db316643cf87e5bc,
+        type: 2}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 768145761}
+    - target: {fileID: 114684571271113678, guid: 7b7900c9a08900d4db316643cf87e5bc,
+        type: 2}
+      propertyPath: playerid
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b7900c9a08900d4db316643cf87e5bc, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &423608605 stripped
+--- !u!1 &328775965 stripped
 GameObject:
+  m_CorrespondingSourceObject: {fileID: 1122015658920678, guid: 7b7900c9a08900d4db316643cf87e5bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 328775964}
+--- !u!1 &423608605
+GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 1085471005911620, guid: 1cf7e90f1428f9c4f9c2921d0da22054,
     type: 2}
   m_PrefabInternal: {fileID: 1041045887}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 423608608}
+  - component: {fileID: 423608607}
+  - component: {fileID: 423608606}
+  m_Layer: 0
+  m_Name: Demon4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &423608606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114853369835239274, guid: 1cf7e90f1428f9c4f9c2921d0da22054,
+    type: 2}
+  m_PrefabInternal: {fileID: 1041045887}
+  m_GameObject: {fileID: 423608605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6436d9daa3fb00b4a84f58c9a362a474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  playerid: 4
+  isangle: 0
+  isattack: 0
+  canmove: 0
+  attackrange: 1.5
+  attacktime: 0.5
+  attackdamage: 40
+  enemy: {fileID: 768145761}
+--- !u!212 &423608607
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 212911226197682882, guid: 1cf7e90f1428f9c4f9c2921d0da22054,
+    type: 2}
+  m_PrefabInternal: {fileID: 1041045887}
+  m_GameObject: {fileID: 423608605}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300008, guid: bb5eedf9901b401438a5ae4d8040e378, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.2, y: 0.2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &423608608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4374664004986192, guid: 1cf7e90f1428f9c4f9c2921d0da22054,
+    type: 2}
+  m_PrefabInternal: {fileID: 1041045887}
+  m_GameObject: {fileID: 423608605}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.77, y: -1.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &768145761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1142679645025928, guid: ebe1d16b7ed2f2847a3496b2e4390446,
@@ -265,7 +389,7 @@ Prefab:
         type: 2}
       propertyPath: players.Array.data[1]
       value: 
-      objectReference: {fileID: 1692090241}
+      objectReference: {fileID: 328775965}
     - target: {fileID: 114303762973054500, guid: 42583c5ef1489df41839395e4e56e647,
         type: 2}
       propertyPath: players.Array.data[2]
@@ -328,14 +452,114 @@ Prefab:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 768145761}
+    - target: {fileID: 114853369835239274, guid: 1cf7e90f1428f9c4f9c2921d0da22054,
+        type: 2}
+      propertyPath: attackdamage
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cf7e90f1428f9c4f9c2921d0da22054, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1258867514 stripped
+--- !u!1 &1258867514
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 1122015658920678, guid: f35f1fa1d8c621b47961804aaab45446,
     type: 2}
   m_PrefabInternal: {fileID: 33641511}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1258867517}
+  - component: {fileID: 1258867516}
+  - component: {fileID: 1258867515}
+  m_Layer: 0
+  m_Name: Demon1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1258867515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114684571271113678, guid: f35f1fa1d8c621b47961804aaab45446,
+    type: 2}
+  m_PrefabInternal: {fileID: 33641511}
+  m_GameObject: {fileID: 1258867514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6436d9daa3fb00b4a84f58c9a362a474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  playerid: 1
+  isangle: 0
+  isattack: 0
+  canmove: 0
+  attackrange: 1.5
+  attacktime: 0.5
+  attackdamage: 40
+  enemy: {fileID: 768145761}
+--- !u!212 &1258867516
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 212049579141584528, guid: f35f1fa1d8c621b47961804aaab45446,
+    type: 2}
+  m_PrefabInternal: {fileID: 33641511}
+  m_GameObject: {fileID: 1258867514}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: bb5eedf9901b401438a5ae4d8040e378, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.2, y: 0.2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1258867517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4191230419590896, guid: f35f1fa1d8c621b47961804aaab45446,
+    type: 2}
+  m_PrefabInternal: {fileID: 33641511}
+  m_GameObject: {fileID: 1258867514}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.427, y: 1.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1418818553
 Prefab:
   m_ObjectHideFlags: 0
@@ -374,6 +598,10 @@ Prefab:
     - target: {fileID: 4242911960645124, guid: ebe1d16b7ed2f2847a3496b2e4390446, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142679645025928, guid: ebe1d16b7ed2f2847a3496b2e4390446, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebe1d16b7ed2f2847a3496b2e4390446, type: 2}
@@ -455,11 +683,106 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1551539573 stripped
+--- !u!1 &1551539573
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 1235709569382436, guid: 85e8eeb497c80a54f895f1bcf0dfca07,
     type: 2}
   m_PrefabInternal: {fileID: 1655762735}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1551539576}
+  - component: {fileID: 1551539575}
+  - component: {fileID: 1551539574}
+  m_Layer: 0
+  m_Name: Demon3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1551539574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114949946193658184, guid: 85e8eeb497c80a54f895f1bcf0dfca07,
+    type: 2}
+  m_PrefabInternal: {fileID: 1655762735}
+  m_GameObject: {fileID: 1551539573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6436d9daa3fb00b4a84f58c9a362a474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  playerid: 3
+  isangle: 0
+  isattack: 0
+  canmove: 0
+  attackrange: 1.5
+  attacktime: 0.5
+  attackdamage: 40
+  enemy: {fileID: 768145761}
+--- !u!212 &1551539575
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 212871341235254568, guid: 85e8eeb497c80a54f895f1bcf0dfca07,
+    type: 2}
+  m_PrefabInternal: {fileID: 1655762735}
+  m_GameObject: {fileID: 1551539573}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300008, guid: bb5eedf9901b401438a5ae4d8040e378, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.2, y: 0.2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1551539576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4970556351069716, guid: 85e8eeb497c80a54f895f1bcf0dfca07,
+    type: 2}
+  m_PrefabInternal: {fileID: 1655762735}
+  m_GameObject: {fileID: 1551539573}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.23, y: -1.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1655762735
 Prefab:
   m_ObjectHideFlags: 0
@@ -504,11 +827,11 @@ Prefab:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 768145761}
+    - target: {fileID: 114949946193658184, guid: 85e8eeb497c80a54f895f1bcf0dfca07,
+        type: 2}
+      propertyPath: attackdamage
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85e8eeb497c80a54f895f1bcf0dfca07, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1692090241 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1222035064472528, guid: 7b7900c9a08900d4db316643cf87e5bc,
-    type: 2}
-  m_PrefabInternal: {fileID: 328775964}

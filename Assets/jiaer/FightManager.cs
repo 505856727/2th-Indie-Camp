@@ -5,10 +5,17 @@ using UnityEngine;
 public class FightManager : MonoBehaviour {
     public GameObject[] players;
     public GameObject angle;
+    public static FightManager instance;
     public int[] blick;
     private void Start()
     {
+        instance = this;
         StartCoroutine(Blick());
+    }
+
+    public static FightManager GetInstance()
+    {
+        return instance;
     }
 
     int FindMax()
@@ -48,7 +55,6 @@ public class FightManager : MonoBehaviour {
             yield return null;
         }
         ToAngle((FindMax()+1).ToString());
-        print(FindMax() + 1);
         for(int i = 0; i < players.Length; i++)
         {
             players[i].GetComponent<GhostControl>().canmove = true;
@@ -64,8 +70,7 @@ public class FightManager : MonoBehaviour {
 
     public void ToGhost(string id)
     {
-        players[int.Parse(id) - 1].SetActive(false);
-        angle.GetComponent<AngleControl>().id = id;
-        angle.SetActive(true);        
+        players[int.Parse(id) - 1].SetActive(true);
+        angle.SetActive(false);        
     }
 }

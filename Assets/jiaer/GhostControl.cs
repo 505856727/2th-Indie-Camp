@@ -9,7 +9,8 @@ public class GhostControl : MonoBehaviour {
     public bool isattack;
     public bool canmove;
     public float attackrange;
-    public float attacktime; 
+    public float attacktime;
+    public float attackdamage;
     public GameObject enemy;
     //public Animator m_anim;
 	// Use this for initialization
@@ -46,7 +47,8 @@ public class GhostControl : MonoBehaviour {
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
-        if (Input.GetAxis("Attack" + playerid) == -1 && isattack == false)
+        print(playerid+" "+Input.GetAxis("Attack" + playerid));
+        if (Input.GetAxis("Attack" + playerid) < -0.9f && isattack == false)
         {
             isattack = true;
             //m_anim.SetTrigger("attack");
@@ -57,11 +59,12 @@ public class GhostControl : MonoBehaviour {
     IEnumerator Attack()
     {
         yield return new WaitForSeconds(attacktime / 2);
+        print((transform.localScale.x > 0 && transform.position.x < enemy.transform.position.x) || (transform.localScale.x < 0 && transform.position.x > enemy.transform.position.x));
         if ((transform.localScale.x > 0 && transform.position.x < enemy.transform.position.x) || (transform.localScale.x < 0 && transform.position.x > enemy.transform.position.x))
         {
             if (Vector3.Distance(enemy.transform.position, transform.position) < attackrange)
             {
-                print(gameObject + " win");
+                enemy.GetComponent<AngelHealth>().TakeDamage(attackdamage, playerid);
             }
         }
         yield return new WaitForSeconds(attacktime / 2);
