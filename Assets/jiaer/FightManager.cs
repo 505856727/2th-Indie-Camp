@@ -64,6 +64,7 @@ public class FightManager : MonoBehaviour {
 
     public void ToAngle(string id)
     {
+        angle.transform.position = players[int.Parse(id) - 1].transform.position;
         angle.SetActive(true);
         angle.GetComponent<AngleControl>().id = id;
         players[int.Parse(id)-1].SetActive(false);
@@ -71,6 +72,7 @@ public class FightManager : MonoBehaviour {
 
     public void ToGhost(string id)
     {
+        players[int.Parse(id) - 1].transform.position = angle.transform.position;
         players[int.Parse(id) - 1].SetActive(true);
         angle.SetActive(false);        
     }
