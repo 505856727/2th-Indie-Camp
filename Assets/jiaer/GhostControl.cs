@@ -15,10 +15,10 @@ public class GhostControl : MonoBehaviour {
 
     public bool freeze = false;
     public bool die = false;
-    //public Animator m_anim;
+    public Animator m_anim;
 	// Use this for initialization
 	void Start () {
-        //m_anim = GetComponentInChildren<Animator>();
+        m_anim = GetComponentInChildren<Animator>();
     }
 	
 	// Update is called once per frame
@@ -28,27 +28,20 @@ public class GhostControl : MonoBehaviour {
             if (freeze || die)
                 return;
             PlayerControl(playerid);
+            AnimatorControl();
         }  
     }
 
     void PlayerControl(string id)
     {
         float moveX = Input.GetAxis("LeftX" + id);
-        float moveY = Input.GetAxis("LeftY" + id);
-        //if (m_anim)
-        //{
-        //    if (moveX != 0 || moveY != 0)
-        //        m_anim.SetBool("moving", true);
-        //    else m_anim.SetBool("moving", false);
-        //}
-        
-
+        float moveY = Input.GetAxis("LeftY" + id);        
         transform.position += new Vector3(moveX * speed * Time.deltaTime, -moveY * speed * Time.deltaTime, 0);
-        if (Input.GetAxis("LeftX" + id) < 0)
+        if (moveX < 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
-        else if (Input.GetAxis("LeftX" + id) > 0)
+        else if (moveX > 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
@@ -61,19 +54,34 @@ public class GhostControl : MonoBehaviour {
         }
     }
 
+    public void AnimatorControl()
+    {
+        if ((Mathf.Abs(Input.GetAxis("LeftX" + playerid)) > 0.05f || Mathf.Abs(Input.GetAxis("LeftY" + playerid)) > 0.05f )&& !isattack)
+        {
+            m_anim.SetInteger("state", 1);
+        }
+        else if (isattack)
+        {
+            m_anim.SetInteger("state", 2);
+        }
+        else
+        {
+            m_anim.SetInteger("state", 0);
+        }
+
+    }
+
     IEnumerator Attack()
     {
         yield return new WaitForSeconds(attacktime / 2);
-        print((transform.localScale.x > 0 && transform.position.x < enemy.transform.position.x) || (transform.localScale.x < 0 && transform.position.x > enemy.transform.position.x));
-        if ((transform.localScale.x > 0 && transform.position.x < enemy.transform.position.x) || (transform.localScale.x < 0 && transform.position.x > enemy.transform.position.x))
-        {
-            if (Vector3.Distance(enemy.transform.position, transform.position) < attackrange)
-            {
-                enemy.GetComponent<AngelHealth>().TakeDamage(attackdamage, playerid);
-            }
-        }
+        //if ((transform.localScale.x > 0 && transform.position.x < enemy.transform.position.x) || (transform.localScale.x < 0 && transform.position.x > enemy.transform.position.x))
+        //{
+        //    if (Vector3.Distance(enemy.transform.position, transform.position) < attackrange)
+        //    {
+        //        enemy.GetComponent<AngelHealth>().TakeDamage(attackdamage, playerid);
+        //    }
+        //}
         yield return new WaitForSeconds(attacktime / 2);
-        //m_anim.ResetTrigger("attack");
         isattack = false;
     }
 }
