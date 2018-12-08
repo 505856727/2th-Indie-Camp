@@ -10,9 +10,11 @@ public class DemonHealth : CharacterHealth
     public TombStone TombStonePrefab;
     bool freeze = false;
     float freezeTimer = float.MinValue;
+    private Animator anim;
     // Use this for initialization
     void Start () {
         controller = GetComponent<GhostControl>();
+        anim = GetComponentInChildren<Animator>();
     }
 	
 	// Update is called once per frame
@@ -24,6 +26,7 @@ public class DemonHealth : CharacterHealth
                 AudioManager.GetInstance().PlaySound(1);
                 freeze = false;
                 controller.freeze = freeze;
+                anim.SetTrigger("frozenEnd");
             }
         }
 	}
@@ -37,6 +40,7 @@ public class DemonHealth : CharacterHealth
             AudioManager.GetInstance().PlaySound(6);
             controller.freeze = freeze;
             freezeTimer = Time.time;
+            anim.SetTrigger("frozenBegin");
         }
         else
         {

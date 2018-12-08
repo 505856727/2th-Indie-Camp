@@ -7,6 +7,7 @@ public class GameStart : MonoBehaviour {
     public GameObject start;
     public GameObject quit;
     public GameObject star;
+    public AudioClip music;
     public float offset;
 	// Use this for initialization
 	void Start () {

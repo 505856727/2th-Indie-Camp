@@ -32,6 +32,7 @@ public class GameMgr : MonoBehaviour {
             sliders[Current_WinJudge.sliderOrder].value = Current_WinJudge.accumulateTime / TimeToWin * 100;
             if (Current_WinJudge.accumulateTime >= TimeToWin)
             {
+                AudioManager.GetInstance().PlayMusic(2);
                 WinText.gameObject.SetActive(true);
                 WinText.text = "Player" + Current_WinJudge.playerID + "Win!";
                 Invoke("ReturnToMenu", 5.0f);
