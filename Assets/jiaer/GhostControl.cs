@@ -86,6 +86,7 @@ public class GhostControl : MonoBehaviour {
 
     IEnumerator Attack()
     {
+        m_anim.SetTrigger("attack");
         AudioManager.GetInstance().PlaySound(attacksoundid);
         yield return new WaitForSeconds(attacktime / 2);
         attackTimer = Time.time;
@@ -98,5 +99,6 @@ public class GhostControl : MonoBehaviour {
         }
         yield return new WaitForSeconds(attacktime / 2);
         isattack = false;
+        m_anim.SetTrigger("attackfinish");
     }
 }

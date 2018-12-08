@@ -25,7 +25,8 @@ public class Bullet : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!collision.GetComponent<GhostControl>().die)
+        Debug.Log(collision.gameObject.tag);
+        if(!collision.GetComponent<GhostControl>().die || collision.gameObject.CompareTag("Wall"))
         {
             bloom = true;
             m_anim.SetTrigger("bloom");

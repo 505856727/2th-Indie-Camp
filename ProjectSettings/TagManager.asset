@@ -6,6 +6,7 @@ TagManager:
   tags:
   - angle
   - ghost
+  - Wall
   layers:
   - Default
   - TransparentFX

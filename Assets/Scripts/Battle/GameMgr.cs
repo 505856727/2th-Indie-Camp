@@ -49,6 +49,6 @@ public class GameMgr : MonoBehaviour {
 
     public void ReturnToMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Start");
     }
 }
