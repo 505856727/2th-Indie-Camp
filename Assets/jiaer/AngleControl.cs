@@ -33,7 +33,7 @@ public class AngleControl : MonoBehaviour {
 
     void AngleAttack()
     {
-        if (Input.GetAxis("Attack" + id) == 1 && isattack == false)
+        if (Input.GetAxis("Attack" + id)<-0.9f && isattack == false)
         {
             isattack = true;
         }
