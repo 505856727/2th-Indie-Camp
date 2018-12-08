@@ -74,6 +74,10 @@ public class GhostControl : MonoBehaviour {
         {
             m_anim.SetInteger("state", 2);
         }
+        else if (freeze)
+        {
+            m_anim.SetInteger("state", 4);
+        }
         else
         {
             m_anim.SetInteger("state", 0);
