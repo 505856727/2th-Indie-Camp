@@ -5,9 +5,10 @@ using UnityEngine;
 public class InputDemo : MonoBehaviour {
     public float speed;
     public string playerid;
+    public bool isangle;
     public bool isattack;
     public float attackrange;
-    public float attacktime;
+    public float attacktime; 
     public GameObject enemy;
 	// Use this for initialization
 	void Start () {
@@ -22,7 +23,7 @@ public class InputDemo : MonoBehaviour {
     void PlayerControl(string id)
     {
         transform.position += new Vector3(Input.GetAxis("LeftX"+id) * speed * Time.deltaTime, -Input.GetAxis("LeftY"+id) * speed * Time.deltaTime, 0);
-        if (id != "5")
+        if (!isangle)
         {
             if (Input.GetAxis("RightX" + id) < 0)
             {
