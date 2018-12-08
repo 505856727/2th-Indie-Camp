@@ -20406,6 +20406,35 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1144498587853892, guid: 8e7ad405753f0dc409d32fa819968d5e,
     type: 2}
   m_PrefabInternal: {fileID: 988282157}
+--- !u!1 &763251378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 763251379}
+  m_Layer: 0
+  m_Name: Walls
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &763251379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 763251378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1118597927}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &768768757
 GameObject:
   m_ObjectHideFlags: 0
@@ -29467,6 +29496,14 @@ CompositeCollider2D:
         Y: 0
       - X: -40000000
         Y: 0
+    - - X: -180000000
+        Y: 40000000
+      - X: -190000000
+        Y: 40000000
+      - X: -190000000
+        Y: 30000000
+      - X: -180000000
+        Y: 30000000
     - - X: 50000000
         Y: 30000000
       - X: 40000000
@@ -29488,14 +29525,6 @@ CompositeCollider2D:
       - X: 50000000
         Y: 10000000
     - - X: -180000000
-        Y: 40000000
-      - X: -190000000
-        Y: 40000000
-      - X: -190000000
-        Y: 30000000
-      - X: -180000000
-        Y: 30000000
-    - - X: -180000000
         Y: -10000000
       - X: -170000000
         Y: -10000000
@@ -29518,6 +29547,18 @@ CompositeCollider2D:
       - X: -200000000
         Y: -20000000
       - X: -180000000
+        Y: -20000000
+    - - X: -80000000
+        Y: 10000000
+      - X: -90000000
+        Y: 10000000
+      - X: -90000000
+        Y: 20000000
+      - X: -110000000
+        Y: 20000000
+      - X: -110000000
+        Y: -20000000
+      - X: -80000000
         Y: -20000000
     - - X: 100000000
         Y: 20000000
@@ -29534,18 +29575,6 @@ CompositeCollider2D:
       - X: 80000000
         Y: -20000000
       - X: 100000000
-        Y: -20000000
-    - - X: -80000000
-        Y: 10000000
-      - X: -90000000
-        Y: 10000000
-      - X: -90000000
-        Y: 20000000
-      - X: -110000000
-        Y: 20000000
-      - X: -110000000
-        Y: -20000000
-      - X: -80000000
         Y: -20000000
     - - X: 160000000
         Y: -40000000
@@ -29703,6 +29732,10 @@ CompositeCollider2D:
       - {x: -5, y: 3}
       - {x: -5, y: 0}
       - {x: -4, y: 0}
+    - - {x: -18, y: 4}
+      - {x: -19, y: 4}
+      - {x: -19, y: 3}
+      - {x: -18, y: 3}
     - - {x: 5, y: 3}
       - {x: 4, y: 3}
       - {x: 4, y: 4}
@@ -29713,10 +29746,6 @@ CompositeCollider2D:
       - {x: 4, y: 2}
       - {x: 4, y: 1}
       - {x: 5, y: 1}
-    - - {x: -18, y: 4}
-      - {x: -19, y: 4}
-      - {x: -19, y: 3}
-      - {x: -18, y: 3}
     - - {x: -18, y: -1}
       - {x: -17, y: -1}
       - {x: -17, y: 0}
@@ -29729,6 +29758,12 @@ CompositeCollider2D:
       - {x: -20, y: 0}
       - {x: -20, y: -2}
       - {x: -18, y: -2}
+    - - {x: -8, y: 1}
+      - {x: -9, y: 1}
+      - {x: -9, y: 2}
+      - {x: -11, y: 2}
+      - {x: -11, y: -2}
+      - {x: -8, y: -2}
     - - {x: 10, y: 2}
       - {x: 8, y: 2}
       - {x: 8, y: 1}
@@ -29737,12 +29772,6 @@ CompositeCollider2D:
       - {x: 8, y: -1}
       - {x: 8, y: -2}
       - {x: 10, y: -2}
-    - - {x: -8, y: 1}
-      - {x: -9, y: 1}
-      - {x: -9, y: 2}
-      - {x: -11, y: 2}
-      - {x: -11, y: -2}
-      - {x: -8, y: -2}
     - - {x: 16, y: -4}
       - {x: 18, y: -4}
       - {x: 18, y: -2}
@@ -29805,7 +29834,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 906083402}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -29817,7 +29846,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!19719996 &906083408
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -30725,6 +30754,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1118597926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1118597927}
+  - component: {fileID: 1118597929}
+  - component: {fileID: 1118597928}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1118597927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1118597926}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.31, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 763251379}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1118597928
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1118597926}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!61 &1118597929
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1118597926}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.7609186, y: 1.6345243}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.0399084, y: 4.2690487}
+  m_EdgeRadius: 0
 --- !u!1 &1124203128
 GameObject:
   m_ObjectHideFlags: 0

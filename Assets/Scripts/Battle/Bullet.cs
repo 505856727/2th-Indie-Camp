@@ -26,11 +26,20 @@ public class Bullet : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.tag);
-        if(!collision.GetComponent<GhostControl>().die || collision.gameObject.CompareTag("Wall"))
+        GhostControl temp = collision.GetComponent<GhostControl>();
+        if (collision.gameObject.CompareTag("Wall"))
         {
             bloom = true;
             m_anim.SetTrigger("bloom");
-            collision.GetComponent<DemonHealth>().TakeDamage(damage, attackerID);
+        }
+        else if (temp)
+        {
+            if (!temp.die)
+            {
+                bloom = true;
+                m_anim.SetTrigger("bloom");
+                collision.GetComponent<DemonHealth>().TakeDamage(damage, attackerID);
+            }
         }
     }
 }
