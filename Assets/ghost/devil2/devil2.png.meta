@@ -1,0 +1,604 @@
+fileFormatVersion: 2
+guid: 558c82dfb10a16645814ba4b79d8792d
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: devil2_0
+    21300002: devil2_1
+    21300004: devil2_2
+    21300006: devil2_3
+    21300008: devil2_4
+    21300010: devil2_5
+    21300012: devil2_6
+    21300014: devil2_7
+    21300016: devil2_8
+    21300018: devil2_9
+    21300020: devil2_10
+    21300022: devil2_11
+    21300024: devil2_12
+    21300026: devil2_13
+    21300028: devil2_14
+    21300030: devil2_15
+    21300032: devil2_16
+    21300034: devil2_17
+    21300036: devil2_18
+    21300038: devil2_19
+    21300040: devil2_20
+    21300042: devil2_21
+    21300044: devil2_22
+    21300046: devil2_23
+    21300048: devil2_24
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: devil2_0
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1631
+        width: 275
+        height: 201
+      alignment: 9
+      pivot: {x: 0.22227694, y: 0.38741595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb6a1bf7b71b044eb2f5d0587de4cd8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_1
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1602
+        width: 265
+        height: 230
+      alignment: 9
+      pivot: {x: 0.23314509, y: 0.46925315}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd6d625b51ac984386e050eeb46fa92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_2
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 1631
+        width: 272
+        height: 201
+      alignment: 9
+      pivot: {x: 0.23481302, y: 0.38741595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52515142036284447860ec2983712cf8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_3
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 1631
+        width: 272
+        height: 201
+      alignment: 9
+      pivot: {x: 0.22441326, y: 0.380379}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857f9530aea63ff4b90817b4397c9883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_4
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1359
+        width: 239
+        height: 199
+      alignment: 9
+      pivot: {x: 0.24553895, y: 0.4004992}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0487238620e11ed4d930be0418763eb3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_5
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1333
+        width: 236
+        height: 225
+      alignment: 9
+      pivot: {x: 0.24230415, y: 0.47485623}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49a99305bb471c4391cb24300c6b8e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_6
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 1366
+        width: 224
+        height: 199
+      alignment: 9
+      pivot: {x: 0.25375476, y: 0.4004992}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f3f91d6bd8cf141a505fd85cbf425d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_7
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 1359
+        width: 233
+        height: 199
+      alignment: 9
+      pivot: {x: 0.26933634, y: 0.4004992}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30dbbf87ad8cb645bef9dabfdf174bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_8
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1041
+        width: 224
+        height: 201
+      alignment: 9
+      pivot: {x: 0.27271932, y: 0.39446324}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7ec2a3259d60e4c910c6d3851f4dac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_9
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1041
+        width: 169
+        height: 201
+      alignment: 9
+      pivot: {x: 0.36192802, y: 0.4102935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a05713806b5e44cb546f040a2d9b51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_10
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 1041
+        width: 141
+        height: 235
+      alignment: 9
+      pivot: {x: 0.43982193, y: 0.3375182}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d64bbd6138803f4faf076a6b4422076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_11
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 1035
+        width: 197
+        height: 214
+      alignment: 9
+      pivot: {x: 0.39232096, y: 0.39096156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e99adee410afb429ce826aa2c49453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_12
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 729
+        width: 253
+        height: 199
+      alignment: 9
+      pivot: {x: 0.23588724, y: 0.42005193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f6a8bc6fae1f94ca6c0b477c5a010c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_13
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 729
+        width: 210
+        height: 199
+      alignment: 9
+      pivot: {x: 0.27776998, y: 0.41472194}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67d72fe667eeb64fa4ec382edc223d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_14
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 736
+        width: 170
+        height: 204
+      alignment: 9
+      pivot: {x: 0.4625657, y: 0.4012143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89c95eb2c4a215449c92e06f948758d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_16
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 696
+        width: 273
+        height: 266
+      alignment: 9
+      pivot: {x: 0.66551125, y: 0.41939205}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceaf1d5bf0454c44fa364b42584fd985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_17
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 449
+        width: 273
+        height: 201
+      alignment: 9
+      pivot: {x: 0.22675924, y: 0.40142125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50995453bbad08c4e906c040cf7ddb42
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_18
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 449
+        width: 280
+        height: 201
+      alignment: 9
+      pivot: {x: 0.22110225, y: 0.40142125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a387ed085f1db4c983f3095e60995f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_19
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 449
+        width: 268
+        height: 201
+      alignment: 9
+      pivot: {x: 0.23470819, y: 0.40142125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98b1b4d6ad634a4290690c8fe538e72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_20
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 449
+        width: 275
+        height: 201
+      alignment: 9
+      pivot: {x: 0.22874601, y: 0.39562258}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09478522c820a6e4a9dafaf09ed54335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_21
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 141
+        width: 287
+        height: 199
+      alignment: 9
+      pivot: {x: 0.20517063, y: 0.39807636}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5387962387083d1409185ef50f2011f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_22
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 137
+        width: 301
+        height: 203
+      alignment: 9
+      pivot: {x: 0.20183758, y: 0.40813398}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14bafd80a761c9c4c90fca1dfc7919f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_23
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 144
+        width: 270
+        height: 203
+      alignment: 9
+      pivot: {x: 0.22372301, y: 0.40813434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee850066cac899a449d1d966200045d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devil2_24
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 139
+        width: 286
+        height: 201
+      alignment: 9
+      pivot: {x: 0.22287777, y: 0.40722048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8a784ae1cb9dd4bbaec6754cfd7d8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7c097f7ad7e6d37449dcae3e992e91f6
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
