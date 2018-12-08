@@ -12,6 +12,9 @@ public class GhostControl : MonoBehaviour {
     public float attacktime;
     public float attackdamage;
     public GameObject enemy;
+
+    public bool freeze = false;
+    public bool die = false;
     //public Animator m_anim;
 	// Use this for initialization
 	void Start () {
@@ -22,6 +25,8 @@ public class GhostControl : MonoBehaviour {
 	void Update () {
         if (canmove)
         {
+            if (freeze || die)
+                return;
             PlayerControl(playerid);
         }  
     }

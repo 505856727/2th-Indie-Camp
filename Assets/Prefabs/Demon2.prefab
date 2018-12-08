@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freezeDuration: 3
+  rebornTime: 5
   controller: {fileID: 0}
   TombStonePrefab: {fileID: 0}
 --- !u!114 &114684571271113678
@@ -146,10 +147,10 @@ MonoBehaviour:
   isangle: 0
   isattack: 0
   canmove: 0
-  attackrange: 1.5
-  attacktime: 0.5
+  attackrange: 2.5
+  attacktime: 0.2
+  attackdamage: 40
   enemy: {fileID: 0}
-  m_anim: {fileID: 0}
 --- !u!212 &212654697520884950
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -48,7 +48,7 @@ public class FightManager : MonoBehaviour {
             {
                 blick[2]++;
             }
-            if (Input.GetKeyDown(KeyCode.Joystick3Button0))
+            if (Input.GetKeyDown(KeyCode.Joystick4Button0))
             {
                 blick[3]++;
             }

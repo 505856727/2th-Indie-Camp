@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour {
     public float damage = 10.0f;
     public float speed = 100.0f;
     public float duration = 1.0f;
-    public Vector3 forwardVec;
+    //public Vector3 forwardVec;
 	// Use this for initialization
 	void Start () {
         Destroy(this.gameObject, duration);
@@ -15,7 +15,8 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position += speed * forwardVec *Time.deltaTime;
+        //transform.position += speed * forwardVec *Time.deltaTime;
+        transform.Translate(speed*Time.deltaTime, 0, 0);
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -6,13 +6,13 @@ public class DemonHealth : CharacterHealth
 {
     public float freezeDuration = 3.0f;
     public float rebornTime = 5.0f;
-    public CharacterMovement controller;
+    public GhostControl controller;
     public TombStone TombStonePrefab;
     bool freeze = false;
     float freezeTimer = float.MinValue;
     // Use this for initialization
     void Start () {
-        controller = GetComponent<CharacterMovement>();
+        controller = GetComponent<GhostControl>();
     }
 	
 	// Update is called once per frame
@@ -38,7 +38,6 @@ public class DemonHealth : CharacterHealth
         }
         else
         {
-            Debug.Log("Demon Die");
             //Animator setTrigger
             //
             controller.die = true;
