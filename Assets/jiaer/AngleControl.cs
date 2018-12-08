@@ -21,13 +21,16 @@ public class AngleControl : MonoBehaviour {
     void AngleMove()
     {
         transform.position += new Vector3(Input.GetAxis("LeftX" + id) * speed * Time.deltaTime, -Input.GetAxis("LeftY" + id) * speed * Time.deltaTime, 0);
-        if (Input.GetAxis("RightY" + id) < 0) 
+        if (Mathf.Abs(Input.GetAxis("RightY" + id)) > 0.5f || Mathf.Abs(Input.GetAxis("RightX" + id)) > 0.5f)
         {
-            weapon.transform.eulerAngles = new Vector3(0, 0, Vector3.Angle(new Vector3(Input.GetAxis("RightX" + id), -Input.GetAxis("RightY" + id), 0), -Vector3.left));
-        }
-        else
-        {
-            weapon.transform.eulerAngles = new Vector3(0, 0, -Vector3.Angle(new Vector3(Input.GetAxis("RightX" + id), -Input.GetAxis("RightY" + id), 0), -Vector3.left));
+            if (Input.GetAxis("RightY" + id) < 0)
+            {
+                weapon.transform.eulerAngles = new Vector3(0, 0, Vector3.Angle(new Vector3(Input.GetAxis("RightX" + id), -Input.GetAxis("RightY" + id), 0), -Vector3.left));
+            }
+            else
+            {
+                weapon.transform.eulerAngles = new Vector3(0, 0, -Vector3.Angle(new Vector3(Input.GetAxis("RightX" + id), -Input.GetAxis("RightY" + id), 0), -Vector3.left));
+            }
         }
     }
 
