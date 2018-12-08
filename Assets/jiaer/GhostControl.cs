@@ -35,7 +35,7 @@ public class GhostControl : MonoBehaviour {
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
-        if (Input.GetAxis("Attack" + playerid) == 1 && isattack == false)
+        if (Input.GetAxis("Attack" + playerid) == -1 && isattack == false)
         {
             isattack = true;
             StartCoroutine(Attack());

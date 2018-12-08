@@ -16,13 +16,9 @@ public class FightManager : MonoBehaviour {
         int value = 0;
         for (int i = 0; i < players.Length - 1; i++)
         {
-            if (blick[i] < blick[i + 1])
+            if (blick[value] < blick[i + 1])
             {
                 value = i + 1;
-            }
-            else
-            {
-                value = i;
             }
         }
         return value;
@@ -44,6 +40,7 @@ public class FightManager : MonoBehaviour {
             yield return null;
         }
         ToAngle((FindMax()+1).ToString());
+        print(FindMax() + 1);
         for(int i = 0; i < players.Length; i++)
         {
             players[i].GetComponent<GhostControl>().canmove = true;

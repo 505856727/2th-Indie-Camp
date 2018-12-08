@@ -6,13 +6,13 @@ public class Bug : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetAxis("LeftX1") > 0)
+        if (Input.GetAxis("LeftX2") > 0)
         {
-            print(1);
+            print(5);
         }
-        if (Input.GetAxis("Attack1") > 0)
+        if (Input.GetAxis("Attack2") < 0)
         {
-            print(2);
+            print(5);
         }
     }
 }
