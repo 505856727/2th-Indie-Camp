@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputDemo : MonoBehaviour {
+public class GhostControl : MonoBehaviour {
     public float speed;
     public string playerid;
     public bool isangle;

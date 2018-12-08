@@ -46,7 +46,7 @@ public class FightManager : MonoBehaviour {
         ToAngle((FindMax()+1).ToString());
         for(int i = 0; i < players.Length; i++)
         {
-            players[i].GetComponent<InputDemo>().canmove = true;
+            players[i].GetComponent<GhostControl>().canmove = true;
         }
     }
 
