@@ -7,21 +7,28 @@ public class AngleControl : MonoBehaviour {
     public bool isattack;
     public float speed;
     public GameObject weapon;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private Rigidbody2D rigidbody;
+    // Use this for initialization
+    void Start () {
+        rigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    private void FixedUpdate()
+    {
         AngleMove();
+    }
+
+    // Update is called once per frame
+    void Update () {
         AngleAttack();
 	}
 
     void AngleMove()
     {
-        transform.position += new Vector3(Input.GetAxis("LeftX" + id) * speed * Time.deltaTime, -Input.GetAxis("LeftY" + id) * speed * Time.deltaTime, 0);
-        if(Input.GetAxis("LeftX" + id) < 0)
+        rigidbody.velocity = new Vector3(Input.GetAxis("LeftX" + id) * speed * Time.deltaTime, -Input.GetAxis("LeftY" + id) * speed * Time.deltaTime, 0);
+        //transform.position += new Vector3(Input.GetAxis("LeftX" + id) * speed * Time.deltaTime, -Input.GetAxis("LeftY" + id) * speed * Time.deltaTime, 0);
+        if (Input.GetAxis("LeftX" + id) < 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
