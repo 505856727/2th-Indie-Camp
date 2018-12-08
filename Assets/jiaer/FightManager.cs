@@ -5,6 +5,7 @@ using UnityEngine;
 public class FightManager : MonoBehaviour {
     public GameObject[] players;
     public GameObject angle;
+    public GameObject touch;
     public static FightManager instance;
     public int[] blick;
     private void Start()
@@ -56,6 +57,7 @@ public class FightManager : MonoBehaviour {
         }
         ToAngle((FindMax()+1).ToString());
         GameMgr.instance.TurnToAngel((FindMax() + 1).ToString(), "0");
+        Destroy(touch);
         for (int i = 0; i < players.Length; i++)
         {
             players[i].GetComponent<GhostControl>().canmove = true;
