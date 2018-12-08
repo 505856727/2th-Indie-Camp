@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AngelHealth : CharacterHealth {
+    public Slider WinSlider;
     public float maxHp;
     public float currentHp;
     // Use this for initialization
@@ -15,11 +17,14 @@ public class AngelHealth : CharacterHealth {
 		
 	}
 
-    public override void TakeDamage(float damage, GameObject attacker)
+    public override void TakeDamage(float damage, string attackerID)
     {
-        base.TakeDamage(damage, attacker);
+        base.TakeDamage(damage, attackerID);
         currentHp -= damage;
-        if(currentHp <= 0)
+        if (WinSlider)
+            WinSlider.value = currentHp;
+        else Debug.LogError("No Slider");
+        if (currentHp <= 0)
         {
             Debug.Log("Die");
         }
