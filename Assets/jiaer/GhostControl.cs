@@ -52,7 +52,7 @@ public class GhostControl : MonoBehaviour {
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
-        print(playerid+" "+Input.GetAxis("Attack" + playerid));
+        //print(playerid+" "+Input.GetAxis("Attack" + playerid));
         if (Input.GetAxis("Attack" + playerid) < -0.9f && isattack == false)
         {
             isattack = true;

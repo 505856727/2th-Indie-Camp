@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class AngelHealth : CharacterHealth {
     public Slider WinSlider;
+    public Slider HpSlider;
     public float maxHp = 100;
     public float currentHp = 100;
     // Use this for initialization
@@ -26,15 +27,15 @@ public class AngelHealth : CharacterHealth {
     {
         base.TakeDamage(damage, attackerID);
         currentHp -= damage;
-        if (WinSlider)
-            WinSlider.value = currentHp;
+        if (HpSlider)
+            HpSlider.value = currentHp;
         else Debug.LogError("No Slider");
         if (currentHp <= 0)
         {
             Debug.Log("Die");
             FightManager.GetInstance().ToGhost(GetComponent<AngleControl>().id);
             FightManager.GetInstance().ToAngle(attackerID);
-            
+            GameMgr.instance.TurnToAngel(attackerID, "0");
         }
     }
 }
