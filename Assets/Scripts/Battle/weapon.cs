@@ -9,12 +9,12 @@ public class weapon : MonoBehaviour {
     Vector3 mousePositionInWorld;//将点击屏幕的屏幕坐标转换为世界坐标
     Vector3 direction;//武器的方向向量
     public Bullet bulletPrefab;
-    private AngleControl angelController;
+    public AngleControl angelController;
     //private Transform bullets;
 
 	// Use this for initialization
 	void Start () {
-        angelController = GetComponentInParent<AngleControl>();
+
     }
 	
 	// Update is called once per frame
@@ -37,10 +37,11 @@ public class weapon : MonoBehaviour {
 		    transform.eulerAngles = new Vector3(0, 0, Vector3.Angle(mousePositionInWorld - transform.position,Vector3.right));
 
         direction = (mousePositionInWorld - transform.position).normalized;
-        
+
         //if (Input.GetMouseButtonDown(0))
         if(angelController.isattack)
         {
+            Debug.Log("111111");
             Shoot();
         }
 	}

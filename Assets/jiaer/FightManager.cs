@@ -44,7 +44,6 @@ public class FightManager : MonoBehaviour {
             yield return null;
         }
         ToAngle((FindMax()+1).ToString());
-        print(players[FindMax()]);
         for(int i = 0; i < players.Length; i++)
         {
             players[i].GetComponent<InputDemo>().canmove = true;
