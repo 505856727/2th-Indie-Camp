@@ -5,6 +5,7 @@ using UnityEngine;
 public class DemonHealth : CharacterHealth
 {
     public float freezeDuration = 3.0f;
+    public float rebornTime = 5.0f;
     public CharacterMovement controller;
     public TombStone TombStonePrefab;
     bool freeze = false;
@@ -43,8 +44,17 @@ public class DemonHealth : CharacterHealth
             controller.die = true;
             //Die动画播放完之后调用Destroy
             //
-            TombStone TombStoneObj = Instantiate(TombStonePrefab, transform.position, Quaternion.identity);
-            TombStoneObj.playerid = controller.playerid;
+            //TombStone TombStoneObj = Instantiate(TombStonePrefab, transform.position, Quaternion.identity);
+            //TombStoneObj.playerid = controller.playerid;
+            StartCoroutine(Reborn());
         }
+    }
+
+    IEnumerator Reborn()
+    {
+        yield return new WaitForSeconds(rebornTime);
+        //Animator setTrigger
+        controller.die = false;
+        //恢复
     }
 }

@@ -21,5 +21,6 @@ public class Bullet : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         collision.GetComponent<DemonHealth>().TakeDamage(damage, attackerID);
+        //由动画驱动
     }
 }

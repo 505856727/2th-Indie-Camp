@@ -5,15 +5,20 @@ using UnityEngine.UI;
 
 public class AngelHealth : CharacterHealth {
     public Slider WinSlider;
-    public float maxHp;
-    public float currentHp;
+    public float maxHp = 100;
+    public float currentHp = 100;
     // Use this for initialization
     void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnEnable()
+    {
+        currentHp = maxHp;
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
