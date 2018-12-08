@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FightForAngle : MonoBehaviour {
+public class FightManager : MonoBehaviour {
     public GameObject[] players;
+    public GameObject angle;
     public int[] blick;
     private void Start()
     {
@@ -42,7 +43,25 @@ public class FightForAngle : MonoBehaviour {
             }
             yield return null;
         }
-        players[FindMax()].GetComponent<InputDemo>().isangle = true;
+        ToAngle((FindMax()+1).ToString());
         print(players[FindMax()]);
+        for(int i = 0; i < players.Length; i++)
+        {
+            players[i].GetComponent<InputDemo>().canmove = true;
+        }
+    }
+
+    public void ToAngle(string id)
+    {
+        angle.SetActive(true);
+        angle.GetComponent<AngleControl>().id = id;
+        players[int.Parse(id)-1].SetActive(false);
+    }
+
+    public void ToGhost(string id)
+    {
+        players[int.Parse(id) - 1].SetActive(false);
+        angle.GetComponent<AngleControl>().id = id;
+        angle.SetActive(true);        
     }
 }

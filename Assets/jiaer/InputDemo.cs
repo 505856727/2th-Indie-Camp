@@ -7,6 +7,7 @@ public class InputDemo : MonoBehaviour {
     public string playerid;
     public bool isangle;
     public bool isattack;
+    public bool canmove;
     public float attackrange;
     public float attacktime; 
     public GameObject enemy;
@@ -17,33 +18,22 @@ public class InputDemo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        PlayerControl(playerid);        
+        if (canmove)
+        {
+            PlayerControl(playerid);
+        }  
     }
 
     void PlayerControl(string id)
     {
         transform.position += new Vector3(Input.GetAxis("LeftX"+id) * speed * Time.deltaTime, -Input.GetAxis("LeftY"+id) * speed * Time.deltaTime, 0);
-        if (!isangle)
+        if (Input.GetAxis("RightX" + id) < 0)
         {
-            if (Input.GetAxis("RightX" + id) < 0)
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
-            }
-            else if (Input.GetAxis("RightX" + id) > 0)
-            {
-                transform.localScale = new Vector3(1, 1, 1);
-            }
+            transform.localScale = new Vector3(-1, 1, 1);
         }
-        else
+        else if (Input.GetAxis("RightX" + id) > 0)
         {
-            if (Input.GetAxis("RightY" + id) < 0)
-            {
-                transform.eulerAngles = new Vector3(0, 0, Vector3.Angle(new Vector3(Input.GetAxis("RightX" + id), -Input.GetAxis("RightY" + id), 0), -Vector3.left));
-            }
-            else
-            {
-                transform.eulerAngles = new Vector3(0, 0, -Vector3.Angle(new Vector3(Input.GetAxis("RightX" + id), -Input.GetAxis("RightY" + id), 0), -Vector3.left));
-            }
+            transform.localScale = new Vector3(1, 1, 1);
         }
         if (Input.GetAxis("Attack" + playerid) == 1 && isattack == false)
         {
