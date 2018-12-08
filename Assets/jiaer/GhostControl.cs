@@ -17,6 +17,9 @@ public class GhostControl : MonoBehaviour {
     public bool die = false;
     public Animator m_anim;
     private Rigidbody2D rigidbody;
+
+    private float attackTimer;
+    public float attackInterval = 1.0f;
 	// Use this for initialization
 	void Start () {
         m_anim = GetComponentInChildren<Animator>();
@@ -28,7 +31,11 @@ public class GhostControl : MonoBehaviour {
         if (canmove)
         {
             if (freeze || die)
+            {
+                rigidbody.velocity = new Vector3(0, 0, 0);
                 return;
+            }
+                
             PlayerControl(playerid);
             AnimatorControl();
         }  
@@ -49,7 +56,7 @@ public class GhostControl : MonoBehaviour {
             transform.localScale = new Vector3(-1, 1, 1);
         }
         //print(playerid+" "+Input.GetAxis("Attack" + playerid));
-        if (Input.GetAxis("Attack" + playerid) < -0.9f && isattack == false)
+        if (Input.GetAxis("Attack" + playerid) < -0.9f && isattack == false && Time.time - attackTimer>= attackInterval)
         {
             isattack = true;
             //m_anim.SetTrigger("attack");
@@ -76,7 +83,8 @@ public class GhostControl : MonoBehaviour {
     IEnumerator Attack()
     {
         yield return new WaitForSeconds(attacktime / 2);
-        if ((transform.localScale.x > 0 && transform.position.x < enemy.transform.position.x) || (transform.localScale.x < 0 && transform.position.x > enemy.transform.position.x))
+        attackTimer = Time.time;
+        if ((transform.localScale.x > 0 && transform.position.x > enemy.transform.position.x) || (transform.localScale.x < 0 && transform.position.x < enemy.transform.position.x))
         {
             if (Vector3.Distance(enemy.transform.position, transform.position) < attackrange)
             {

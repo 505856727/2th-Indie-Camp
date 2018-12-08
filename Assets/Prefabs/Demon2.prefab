@@ -128,7 +128,7 @@ Animator:
   m_GameObject: {fileID: 1728663489488454}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eedf86a7e19c7ab4da55a3bac78b9e4b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 253b44b01cf949c4dba1147e798f2784, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -175,6 +175,7 @@ MonoBehaviour:
   freeze: 0
   die: 0
   m_anim: {fileID: 0}
+  attackInterval: 1
 --- !u!212 &212654697520884950
 SpriteRenderer:
   m_ObjectHideFlags: 1

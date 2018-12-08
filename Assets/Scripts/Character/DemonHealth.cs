@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DemonHealth : CharacterHealth
 {
-    public float freezeDuration = 3.0f;
-    public float rebornTime = 5.0f;
+    private float freezeDuration = 2.0f;
+    private float rebornTime = 5.0f;
     public GhostControl controller;
     public TombStone TombStonePrefab;
     bool freeze = false;
