@@ -41,6 +41,7 @@ public class DemonHealth : CharacterHealth
             //Animator setTrigger
             //
             controller.die = true;
+            controller.m_anim.SetInteger("state", 3);
             //Die动画播放完之后调用Destroy
             //
             //TombStone TombStoneObj = Instantiate(TombStonePrefab, transform.position, Quaternion.identity);
@@ -54,6 +55,7 @@ public class DemonHealth : CharacterHealth
         yield return new WaitForSeconds(rebornTime);
         //Animator setTrigger
         controller.die = false;
+        controller.m_anim.SetInteger("state", 0);
         //恢复
     }
 }

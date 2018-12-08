@@ -71,19 +71,18 @@ public class GhostControl : MonoBehaviour {
         {
             m_anim.SetInteger("state", 0);
         }
-
     }
 
     IEnumerator Attack()
     {
         yield return new WaitForSeconds(attacktime / 2);
-        //if ((transform.localScale.x > 0 && transform.position.x < enemy.transform.position.x) || (transform.localScale.x < 0 && transform.position.x > enemy.transform.position.x))
-        //{
-        //    if (Vector3.Distance(enemy.transform.position, transform.position) < attackrange)
-        //    {
-        //        enemy.GetComponent<AngelHealth>().TakeDamage(attackdamage, playerid);
-        //    }
-        //}
+        if ((transform.localScale.x > 0 && transform.position.x < enemy.transform.position.x) || (transform.localScale.x < 0 && transform.position.x > enemy.transform.position.x))
+        {
+            if (Vector3.Distance(enemy.transform.position, transform.position) < attackrange)
+            {
+                enemy.GetComponent<AngelHealth>().TakeDamage(attackdamage, playerid);
+            }
+        }
         yield return new WaitForSeconds(attacktime / 2);
         isattack = false;
     }
