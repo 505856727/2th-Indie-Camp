@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour {
-
+    public string playerid;
     private SpriteRenderer spriteRenderer;
     public float speed = 5;
     public bool freeze;//冻住不能走
+    public bool die = false;
     // Use this for initialization
     void Awake()
     {
@@ -19,7 +20,7 @@ public class CharacterMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (freeze)
+        if (freeze ||  die)
             return;
         Vector2 move = Vector2.zero;
 

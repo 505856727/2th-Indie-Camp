@@ -6,6 +6,7 @@ public class DemonHealth : CharacterHealth
 {
     public float freezeDuration = 3.0f;
     public CharacterMovement controller;
+    public TombStone TombStonePrefab;
     bool freeze = false;
     float freezeTimer = float.MinValue;
     // Use this for initialization
@@ -37,6 +38,13 @@ public class DemonHealth : CharacterHealth
         else
         {
             Debug.Log("Demon Die");
+            //Animator setTrigger
+            //
+            controller.die = true;
+            //Die动画播放完之后调用Destroy
+            //
+            TombStone TombStoneObj = Instantiate(TombStonePrefab, transform.position, Quaternion.identity);
+            TombStoneObj.playerid = controller.playerid;
         }
     }
 }
