@@ -57,6 +57,7 @@ public class weapon : MonoBehaviour {
     {
         shootTimer = Time.time;
         Bullet bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        AudioManager.GetInstance().PlaySound(3);
         //bullet.forwardVec = direction;
     }
 }

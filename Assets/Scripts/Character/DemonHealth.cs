@@ -21,6 +21,7 @@ public class DemonHealth : CharacterHealth
         {
             if(Time.time - freezeTimer >= freezeDuration)
             {
+                AudioManager.GetInstance().PlaySound(1);
                 freeze = false;
                 controller.freeze = freeze;
             }
@@ -33,6 +34,7 @@ public class DemonHealth : CharacterHealth
         if (!freeze)
         {
             freeze = true;
+            AudioManager.GetInstance().PlaySound(6);
             controller.freeze = freeze;
             freezeTimer = Time.time;
         }
@@ -47,6 +49,7 @@ public class DemonHealth : CharacterHealth
         controller.die = true;
         GetComponentInChildren<Animator>().SetTrigger("Die");
         StartCoroutine(Reborn());
+        AudioManager.GetInstance().PlaySound(9);
     }
 
     IEnumerator Reborn()
@@ -54,6 +57,7 @@ public class DemonHealth : CharacterHealth
         yield return new WaitForSeconds(rebornTime);
         //Animator setTrigger
         controller.die = false;
+        AudioManager.GetInstance().PlaySound(11);
         GetComponentInChildren<Animator>().SetTrigger("Reborn");
     }
 }

@@ -20,6 +20,7 @@ public class GhostControl : MonoBehaviour {
 
     private float attackTimer;
     public float attackInterval = 1.0f;
+    public int attacksoundid;
 	// Use this for initialization
 	void Start () {
         m_anim = GetComponentInChildren<Animator>();
@@ -85,6 +86,7 @@ public class GhostControl : MonoBehaviour {
 
     IEnumerator Attack()
     {
+        AudioManager.GetInstance().PlaySound(attacksoundid);
         yield return new WaitForSeconds(attacktime / 2);
         attackTimer = Time.time;
         if ((transform.localScale.x > 0 && transform.position.x > enemy.transform.position.x) || (transform.localScale.x < 0 && transform.position.x < enemy.transform.position.x))

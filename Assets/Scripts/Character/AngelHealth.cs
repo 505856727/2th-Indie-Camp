@@ -57,6 +57,7 @@ public class AngelHealth : CharacterHealth {
         if (currentHp <= 0)
         {
             Debug.Log("Die");
+            AudioManager.GetInstance().PlaySound(4);
             FightManager.GetInstance().ToGhost(GetComponent<AngleControl>().id);
             FightManager.GetInstance().ToAngle(attackerID);
             GameMgr.instance.TurnToAngel(attackerID, "0");
