@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class weapon : MonoBehaviour {
-
+    public float shootInterval = 1.0f;
+    private float shootTimer = float.MinValue;
     Vector3 screenPosition;//将物体从世界坐标转换为屏幕坐标
     Vector3 mousePositionOnScreen;//获取到点击屏幕的屏幕坐标
     Vector3 mousePositionInWorld;//将点击屏幕的屏幕坐标转换为世界坐标
@@ -36,6 +37,8 @@ public class weapon : MonoBehaviour {
 		    transform.eulerAngles = new Vector3(0, 0, Vector3.Angle(mousePositionInWorld - transform.position,Vector3.right));
 
         direction = (mousePositionInWorld - transform.position).normalized;
+        if (Time.time - shootTimer <= shootInterval)//攻击间隔
+            return;
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
@@ -44,6 +47,7 @@ public class weapon : MonoBehaviour {
 
     void Shoot()
     {
+        shootTimer = Time.time;
         Bullet bullet = Instantiate(bulletPrefab, transform.position, Quaternion.EulerAngles(transform.eulerAngles));
         bullet.forwardVec = direction;
     }
