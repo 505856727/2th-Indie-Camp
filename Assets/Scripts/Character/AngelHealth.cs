@@ -16,6 +16,8 @@ public class AngelHealth : CharacterHealth {
     private void OnEnable()
     {
         currentHp = maxHp;
+        if (HpSlider)
+            HpSlider.value = currentHp;
     }
 
     // Update is called once per frame
@@ -27,15 +29,18 @@ public class AngelHealth : CharacterHealth {
     {
         base.TakeDamage(damage, attackerID);
         currentHp -= damage;
-        if (HpSlider)
-            HpSlider.value = currentHp;
-        else Debug.LogError("No Slider");
+
+        
         if (currentHp <= 0)
         {
             Debug.Log("Die");
             FightManager.GetInstance().ToGhost(GetComponent<AngleControl>().id);
             FightManager.GetInstance().ToAngle(attackerID);
             GameMgr.instance.TurnToAngel(attackerID, "0");
+            currentHp = maxHp;
         }
+        if (HpSlider)
+            HpSlider.value = currentHp;
+        else Debug.LogError("No Slider");
     }
 }
