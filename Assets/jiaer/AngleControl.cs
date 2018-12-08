@@ -14,6 +14,7 @@ public class AngleControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         AngleMove();
+        AngleAttack();
 	}
 
     void AngleMove()
