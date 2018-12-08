@@ -11,10 +11,11 @@ public class GhostControl : MonoBehaviour {
     public float attackrange;
     public float attacktime; 
     public GameObject enemy;
+    public Animator m_anim;
 	// Use this for initialization
 	void Start () {
-		
-	}
+        m_anim = GetComponentInChildren<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -26,7 +27,13 @@ public class GhostControl : MonoBehaviour {
 
     void PlayerControl(string id)
     {
-        transform.position += new Vector3(Input.GetAxis("LeftX"+id) * speed * Time.deltaTime, -Input.GetAxis("LeftY"+id) * speed * Time.deltaTime, 0);
+        float moveX = Input.GetAxis("LeftX" + id);
+        float moveY = Input.GetAxis("LeftY" + id);
+        if (moveX != 0 || moveY != 0)
+            m_anim.SetBool("moving", true);
+        else m_anim.SetBool("moving", false);
+
+        transform.position += new Vector3(moveX * speed * Time.deltaTime, -moveY * speed * Time.deltaTime, 0);
         if (Input.GetAxis("RightX" + id) < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
@@ -38,6 +45,7 @@ public class GhostControl : MonoBehaviour {
         if (Input.GetAxis("Attack" + playerid) == -1 && isattack == false)
         {
             isattack = true;
+            m_anim.SetTrigger("attack");
             StartCoroutine(Attack());
         }
     }
@@ -53,6 +61,7 @@ public class GhostControl : MonoBehaviour {
             }
         }
         yield return new WaitForSeconds(attacktime / 2);
+        m_anim.ResetTrigger("attack");
         isattack = false;
     }
 }
