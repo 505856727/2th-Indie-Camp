@@ -37,6 +37,14 @@ public class FightManager : MonoBehaviour {
             {
                 blick[1]++;
             }
+            if (Input.GetKeyDown(KeyCode.Joystick3Button0))
+            {
+                blick[2]++;
+            }
+            if (Input.GetKeyDown(KeyCode.Joystick3Button0))
+            {
+                blick[3]++;
+            }
             yield return null;
         }
         ToAngle((FindMax()+1).ToString());
