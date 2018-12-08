@@ -8,6 +8,7 @@ public class FightManager : MonoBehaviour {
     public GameObject touch;
     public static FightManager instance;
     public int[] blick;
+
     private void Start()
     {
         instance = this;
@@ -69,6 +70,7 @@ public class FightManager : MonoBehaviour {
         angle.transform.position = players[int.Parse(id) - 1].transform.position;
         angle.SetActive(true);
         angle.GetComponent<AngleControl>().id = id;
+        angle.GetComponent<AngleControl>().sprite.GetComponent<SpriteRenderer>().sprite = players[int.Parse(id) - 1].GetComponent<GhostControl>().sprite;
         players[int.Parse(id)-1].SetActive(false);
     }
 

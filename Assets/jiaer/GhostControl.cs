@@ -21,6 +21,7 @@ public class GhostControl : MonoBehaviour {
     private float attackTimer;
     public float attackInterval = 1.0f;
     public int attacksoundid;
+    public Sprite sprite;
 	// Use this for initialization
 	void Start () {
         m_anim = GetComponentInChildren<Animator>();

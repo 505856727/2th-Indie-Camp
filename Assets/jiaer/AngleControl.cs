@@ -7,7 +7,7 @@ public class AngleControl : MonoBehaviour {
     public bool isattack;
     public float speed;
     public GameObject weapon;
-
+    public GameObject sprite;
     private Rigidbody2D rigidbody;
     // Use this for initialization
     void Start () {
