@@ -80,6 +80,6 @@ public class FightManager : MonoBehaviour {
         players[int.Parse(id) - 1].SetActive(true);
         players[int.Parse(id) - 1].GetComponent<DemonHealth>().DieProcess();
         players[int.Parse(id) - 1].GetComponent<GhostControl>().isattack = false;
-        angle.SetActive(false);        
+        angle.SetActive(false);   
     }
 }
