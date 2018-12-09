@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FightManager : MonoBehaviour {
     public GameObject[] players;
     public GameObject angle;
     public GameObject touch;
+    public Text Tips;
     public static FightManager instance;
     public int[] blick;
 
@@ -59,6 +61,8 @@ public class FightManager : MonoBehaviour {
         ToAngle((FindMax()+1).ToString());
         GameMgr.instance.TurnToAngel((FindMax() + 1).ToString(), "0");
         Destroy(touch);
+        Tips.gameObject.SetActive(false);
+
         for (int i = 0; i < players.Length; i++)
         {
             players[i].GetComponent<GhostControl>().canmove = true;
