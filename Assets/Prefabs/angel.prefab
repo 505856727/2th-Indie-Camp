@@ -275,7 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   isattack: 0
-  speed: 375
+  speed: 350
   weapon: {fileID: 1239780811246240}
   sprite: {fileID: 1527906161281026}
 --- !u!212 &212432705923985904

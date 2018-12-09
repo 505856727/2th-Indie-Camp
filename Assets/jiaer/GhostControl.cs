@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GhostControl : MonoBehaviour {
-    public float speed;
+    private float speed = 550;
     public string playerid;
     public bool isangle;
     public bool isattack;

@@ -416,6 +416,7 @@ MonoBehaviour:
   star: {fileID: 1338743109}
   music: {fileID: 0}
   offset: 0.86
+  isstart: 1
 --- !u!4 &1269307131
 Transform:
   m_ObjectHideFlags: 0

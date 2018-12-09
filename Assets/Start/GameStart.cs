@@ -9,6 +9,7 @@ public class GameStart : MonoBehaviour {
     public GameObject star;
     public AudioClip music;
     public float offset;
+    public bool isstart;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,24 +22,23 @@ public class GameStart : MonoBehaviour {
 
     void choose()
     {
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-        if (hit.collider && hit.collider.gameObject == start)
+        if (Input.GetAxis("LeftY") > 0.5f && isstart)
         {
-            star.transform.position = Vector3.zero;
-            if (Input.GetMouseButtonDown(0))
-            {
-                SceneManager.LoadScene("Selector");
-            }
+            star.transform.position=new Vector3(0, -offset, 0);
+            isstart = false;
         }
-        else if (hit.collider && hit.collider.gameObject == quit)
+        else if (Input.GetAxis("LeftY") < -0.5f && !isstart)
         {
-            star.transform.position = new Vector3(0, -offset, 0);
-            if (Input.GetMouseButtonDown(0))
-            {
-                Application.Quit();
-            }
+            star.transform.position = new Vector3(0, 0, 0);
+            isstart = true;
         }
-     
+        if (Input.GetKeyDown(KeyCode.JoystickButton0)&&isstart)
+        {
+            SceneManager.LoadScene("Selector");
+        }
+        else if(Input.GetKeyDown(KeyCode.JoystickButton0) && !isstart)
+        {
+            Application.Quit();
+        }
     }
-
 }
