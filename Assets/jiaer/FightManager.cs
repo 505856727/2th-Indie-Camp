@@ -7,6 +7,7 @@ public class FightManager : MonoBehaviour {
     public GameObject[] players;
     public GameObject angle;
     public GameObject touch;
+    public GameObject angleUI;
     public Text Tips;
     public static FightManager instance;
     public int[] blick;
@@ -59,9 +60,10 @@ public class FightManager : MonoBehaviour {
             yield return null;
         }
         ToAngle((FindMax()+1).ToString());
-        GameMgr.instance.TurnToAngel((FindMax() + 1).ToString(), "0");
+        GameMgr.instance.TurnToAngel((FindMax() + 1).ToString(), (FindMax() + 1).ToString());
         Destroy(touch);
         Tips.gameObject.SetActive(false);
+        angleUI.SetActive(true);
 
         for (int i = 0; i < players.Length; i++)
         {

@@ -61,9 +61,9 @@ public class AngelHealth : CharacterHealth {
             bomb.SetActive(true);
             bomb.transform.position = transform.position += new Vector3(0, 1, 0);
             AudioManager.GetInstance().PlaySound(4);
+            GameMgr.instance.TurnToAngel(attackerID, GetComponent<AngleControl>().id);
             FightManager.GetInstance().ToGhost(GetComponent<AngleControl>().id);
             FightManager.GetInstance().ToAngle(attackerID);
-            GameMgr.instance.TurnToAngel(attackerID, "0");
             currentHp = maxHp;
         }
         if (HpSlider)

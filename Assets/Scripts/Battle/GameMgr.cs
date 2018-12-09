@@ -9,6 +9,12 @@ public class GameMgr : MonoBehaviour {
     public float TimeToWin = 60;
     public Dictionary<string, WinJudge> playerList = new Dictionary<string, WinJudge>();
     public List<Slider> sliders = new List<Slider>(3);
+
+    //动态替换头像
+    public List<Image> Avatars = new List<Image>(4);
+    public List<Sprite> OriginAvatars = new List<Sprite>(4);
+    public Sprite AngelAvatar;
+
     public WinJudge Current_WinJudge;
     public Text WinText;
 
@@ -30,6 +36,7 @@ public class GameMgr : MonoBehaviour {
             Current_WinJudge.accumulateTime += Time.deltaTime;
             //Current_WinJudge.WinSlider.value = Current_WinJudge.accumulateTime / TimeToWin * 100;
             sliders[Current_WinJudge.sliderOrder].value = Current_WinJudge.accumulateTime / TimeToWin * 100;
+            
             if (Current_WinJudge.accumulateTime >= TimeToWin)
             {
                 AudioManager.GetInstance().PlayMusic(2);
@@ -45,7 +52,10 @@ public class GameMgr : MonoBehaviour {
         //WinJudge killerWinJudge = playerList[killerID];
         //int temp = killerWinJudge.sliderOrder;
         //playerList[ID].sliderOrder = killerWinJudge.sliderOrder;
+        Debug.Log(int.Parse(deathID) - 1);
+        Avatars[int.Parse(deathID) - 1].sprite = OriginAvatars[int.Parse(deathID) - 1];
         Current_WinJudge = playerList[killerID];
+        Avatars[Current_WinJudge.sliderOrder].sprite = AngelAvatar;
     }
 
     public void ReturnToMenu()
