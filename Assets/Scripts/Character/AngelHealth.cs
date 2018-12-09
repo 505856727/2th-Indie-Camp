@@ -13,6 +13,7 @@ public class AngelHealth : CharacterHealth {
     private float splashDuration = 1.0f;
     private float splashTime;//计时器
     public  SpriteRenderer spriteRender;
+    public GameObject bomb;
     private Color originColor;
     public Color splashColor = Color.red;
     public float toredspeed;
@@ -57,6 +58,8 @@ public class AngelHealth : CharacterHealth {
         if (currentHp <= 0)
         {
             Debug.Log("Die");
+            bomb.SetActive(true);
+            bomb.transform.position = transform.position += new Vector3(0, 1, 0);
             AudioManager.GetInstance().PlaySound(4);
             FightManager.GetInstance().ToGhost(GetComponent<AngleControl>().id);
             FightManager.GetInstance().ToAngle(attackerID);

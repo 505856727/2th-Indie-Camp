@@ -196,8 +196,8 @@ MonoBehaviour:
   isangle: 0
   isattack: 0
   canmove: 0
-  attackrange: 2.5
-  attacktime: 0.2
+  attackrange: 3
+  attacktime: 0.1
   attackdamage: 40
   enemy: {fileID: 0}
   freeze: 0
@@ -205,6 +205,7 @@ MonoBehaviour:
   m_anim: {fileID: 0}
   attackInterval: 1
   attacksoundid: 2
+  sprite: {fileID: 0}
 --- !u!212 &212390276929071556
 SpriteRenderer:
   m_ObjectHideFlags: 1
